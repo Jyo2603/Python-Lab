@@ -1,6 +1,5 @@
 #3b. Write a python program to perform the following operations using user defined functions
-#• Display the maximum and minimum number from the
-array.
+#• Display the maximum and minimum number from the array.
 #Display the second largest number from the array without
 
 def find_max_min(arr):
