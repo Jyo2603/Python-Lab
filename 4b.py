@@ -2,7 +2,10 @@
 
 import re
 
-st = input("Enter the text:")
+st = input("Enter the text: ")
 v = re.findall('[aeiouAEIOU]', st)
-print("Vowel occurrences =",len(v))
-print("Consonant occurrences =“,len(st)-len(v))
+vowel_count = len(v)
+consonant_count = len(re.findall('[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]', st))
+
+print("Vowel occurrences =", vowel_count)
+print("Consonant occurrences =", consonant_count)
