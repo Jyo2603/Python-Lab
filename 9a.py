@@ -5,6 +5,7 @@
 #• Draw the Histogram for the dataset on any column.
 
 import matplotlib.pyplot as plt
+iris = pd.read_csv("iris.csv")
 iris.plot()
 plt.show()
 
