@@ -8,39 +8,33 @@
 #• Demonstrate the working of append () and insert () function.
 #Demonstrate the working of remove() and pop() function.
 
-subjects = ["Maths", "MC&IoT", "DAA", "DCN", "FAFL", "DAA Lab", "DCN lab", "Python Programming Lab", "Data Analysis with R"]
+def main():
+    subjects = [input("Subject {}: ".format(i+1)) for i in range(9)]
 
-print("All subjects:")
-for subject in subjects:
-    print(subject)
+    print("\nAll subjects:")
+    for s in subjects:
+        print(s)
 
-print("\n2nd and 5th subjects:")
-print(subjects[1])
-print(subjects[4])
+    if len(subjects) > 4:
+        print("\n2nd and 5th subjects:", subjects[1], subjects[4])
+    if len(subjects) > 3:
+        print("\nFirst 4 subjects:", subjects[:4])
+        print("\nLast 4 subjects:", subjects[-4:])
+    
+    print("\nPython Programming Lab is", "available" if "Python Programming Lab" in subjects else "not available")
 
-print("\nFirst 4 subjects:")
-print(subjects[:4])
+    subjects.append("New Subject")
+    print("\nAfter appending:", subjects)
+    
+    subjects.insert(2, "Inserted Subject")
+    print("\nAfter inserting at 3rd position:", subjects)
+    
+    subjects.remove("New Subject")
+    print("\nAfter removing:", subjects)
+    
+    if len(subjects) > 2:
+        subjects.pop(2)
+        print("\nAfter popping 3rd position:", subjects)
 
-print("\nLast 4 subjects:")
-print(subjects[-4:])
-
-if "Python Programming Lab" in subjects:
-    print("\nPython Programming Lab is available in the list.")
-else:
-    print("\nPython Programming Lab is not available in the list.")
-
-subjects.append("New Subject")
-print("\nAfter appending a new subject:")
-print(subjects)
-
-subjects.insert(2, "Inserted Subject")
-print("\nAfter inserting a subject at the 3rd position:")
-print(subjects)
-
-subjects.remove("New Subject")
-print("\nAfter removing the new subject:")
-print(subjects)
-
-subjects.pop(2)
-print("\nAfter popping the subject at the 3rd position: ")
-print(subjects)
+if __name__ == "__main__":
+    main()
