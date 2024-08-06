@@ -9,8 +9,9 @@
 #Demonstrate the working of remove() and pop() function.
 
 def main():
-    subjects = [input("Subject {}: ".format(i+1)) for i in range(9)]
-
+    n = input("enter no. of subjects:")
+    subjects=input("enter subjects: ").split()
+    
     print("\nAll subjects:")
     for s in subjects:
         print(s)
