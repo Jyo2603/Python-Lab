@@ -18,7 +18,6 @@ def main():
 
     if len(subjects) > 4:
         print("\n2nd and 5th subjects:", subjects[1], subjects[4])
-    if len(subjects) > 3:
         print("\nFirst 4 subjects:", subjects[:4])
         print("\nLast 4 subjects:", subjects[-4:])
     
